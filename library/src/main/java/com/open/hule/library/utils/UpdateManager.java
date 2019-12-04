@@ -123,6 +123,7 @@ public class UpdateManager implements UpdateDialogListener {
                 // 下载地址如果为null,抛出异常
                 String downloadUrl = Objects.requireNonNull(appUpdate.getNewVersionUrl());
                 Uri uri = Uri.parse(downloadUrl);
+                Log.e("tag","tag123654  "+appUpdate.getSavePath()+"   name =   "+downloadUrl);
                 DownloadManager.Request request = new DownloadManager.Request(uri);
                 // 下载中和下载完成显示通知栏
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
